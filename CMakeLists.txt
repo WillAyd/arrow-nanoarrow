@@ -102,7 +102,7 @@ if(NANOARROW_BUNDLE)
   install(FILES ${NANOARROW_H_TEMP} ${NANOARROW_C_TEMP} ${NANOARROW_HPP_TEMP}
           DESTINATION ".")
 else()
-  add_library(nanoarrow src/nanoarrow/array.c src/nanoarrow/schema.c
+  add_library(nanoarrow SHARED src/nanoarrow/array.c src/nanoarrow/schema.c
                         src/nanoarrow/array_stream.c src/nanoarrow/utils.c)
 
   target_include_directories(nanoarrow
