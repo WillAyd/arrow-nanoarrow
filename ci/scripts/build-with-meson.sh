@@ -87,7 +87,7 @@ function main() {
           -Ddevice=enabled \
           -Dbenchmarks=disabled \
           -Db_coverage=false
-    meson compile
+    meson compile --verbose
     meson test --wrap='valgrind --track-origins=yes --leak-check=full' --print-errorlog
 
     show_header "Run benchmarks"
